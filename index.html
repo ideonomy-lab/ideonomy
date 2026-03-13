@@ -31,25 +31,26 @@
     }
 
     .container {
-      max-width: 900px;
+      max-width: 1200px;
       margin: 0 auto;
-      padding: 0 2rem;
+      padding: 0 3rem;
     }
 
     /* ─── HEADER ─── */
     header {
       border-bottom: 1px solid var(--border);
-      padding: 1.8rem 0;
+      padding: 2rem 0;
     }
 
     .header-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 2rem;
     }
 
     .logo img {
-      height: 28px;
+      height: 44px;
       width: auto;
       display: block;
       filter: invert(1);
@@ -57,18 +58,20 @@
 
     nav {
       display: flex;
-      gap: 2rem;
+      gap: 2.5rem;
       align-items: center;
+      flex-shrink: 0;
     }
 
     nav a {
-      font-size: 0.75rem;
+      font-size: 0.78rem;
       font-family: 'DM Mono', monospace;
       color: var(--muted);
       text-decoration: none;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       transition: color 0.2s;
+      white-space: nowrap;
     }
 
     nav a:hover { color: var(--text); }
@@ -76,18 +79,24 @@
     .nav-cta {
       border: 1px solid var(--border-strong) !important;
       color: var(--text) !important;
-      padding: 0.4rem 1rem;
+      padding: 0.45rem 1.1rem;
     }
 
     /* ─── HERO ─── */
     .hero {
       padding: 7rem 0 6rem;
       border-bottom: 1px solid var(--border);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
     }
+
+    .hero-left {}
 
     .hero-label {
       font-family: 'DM Mono', monospace;
-      font-size: 0.7rem;
+      font-size: 0.72rem;
       color: var(--muted);
       letter-spacing: 0.15em;
       text-transform: uppercase;
@@ -103,29 +112,34 @@
       width: 28px;
       height: 1px;
       background: var(--muted);
+      flex-shrink: 0;
     }
 
     h1 {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(2.6rem, 6vw, 4rem);
+      font-size: clamp(2.4rem, 3.5vw, 3.6rem);
       font-weight: 900;
       line-height: 1.1;
       letter-spacing: -0.02em;
       margin-bottom: 2.2rem;
     }
 
-    .hero-desc {
-      font-size: 1.05rem;
-      color: var(--muted);
-      max-width: 540px;
-      line-height: 1.85;
-      margin-bottom: 3rem;
-    }
-
     .hero-actions {
       display: flex;
       gap: 1rem;
       flex-wrap: wrap;
+    }
+
+    .hero-right {
+      border-left: 1px solid var(--border);
+      padding-left: 5rem;
+    }
+
+    .hero-desc {
+      font-size: 1.1rem;
+      color: var(--muted);
+      line-height: 1.85;
+      margin-bottom: 0;
     }
 
     .btn-primary {
@@ -138,6 +152,7 @@
       padding: 0.9rem 2rem;
       text-decoration: none;
       transition: opacity 0.2s;
+      white-space: nowrap;
     }
     .btn-primary:hover { opacity: 0.7; }
 
@@ -151,46 +166,13 @@
       padding: 0.9rem 2rem;
       text-decoration: none;
       transition: all 0.2s;
+      white-space: nowrap;
     }
     .btn-secondary:hover { border-color: var(--text); color: var(--text); }
 
-    /* ─── MARQUEE ─── */
-    .marquee-wrap {
-      border-bottom: 1px solid var(--border);
-      overflow: hidden;
-      padding: 0.85rem 0;
-      background: var(--surface);
-    }
-
-    .marquee-track {
-      display: flex;
-      gap: 3rem;
-      animation: marquee 30s linear infinite;
-      white-space: nowrap;
-    }
-
-    .marquee-item {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.68rem;
-      color: var(--muted);
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      flex-shrink: 0;
-    }
-
-    .marquee-item::before {
-      content: '— ';
-      color: var(--border-strong);
-    }
-
-    @keyframes marquee {
-      from { transform: translateX(0); }
-      to { transform: translateX(-50%); }
-    }
-
     /* ─── SECTIONS ─── */
     section {
-      padding: 5.5rem 0;
+      padding: 6rem 0;
       border-bottom: 1px solid var(--border);
     }
 
@@ -205,7 +187,7 @@
 
     h2 {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(1.7rem, 3vw, 2.3rem);
+      font-size: clamp(1.8rem, 2.5vw, 2.6rem);
       font-weight: 700;
       line-height: 1.2;
       margin-bottom: 1.5rem;
@@ -214,13 +196,13 @@
     /* ─── ABOUT ─── */
     .about-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 6rem;
       align-items: start;
     }
 
     .about-body p {
-      font-size: 1rem;
+      font-size: 1.05rem;
       color: #706d6a;
       margin-bottom: 1.3rem;
       line-height: 1.85;
@@ -233,12 +215,12 @@
 
     .about-aside {
       border-left: 1px solid var(--border);
-      padding-left: 3rem;
+      padding-left: 4rem;
     }
 
     .pull-quote {
       font-family: 'Playfair Display', serif;
-      font-size: 1.1rem;
+      font-size: 1.15rem;
       font-style: italic;
       color: var(--text);
       line-height: 1.7;
@@ -272,7 +254,7 @@
     }
 
     .detail-val {
-      font-size: 0.9rem;
+      font-size: 0.92rem;
       color: var(--text);
       text-align: right;
     }
@@ -285,34 +267,35 @@
 
     .topic-row {
       display: grid;
-      grid-template-columns: 2.5rem 1fr auto;
-      gap: 1.5rem;
+      grid-template-columns: 3rem 1fr auto;
+      gap: 2rem;
       align-items: center;
-      padding: 1.4rem 0;
+      padding: 1.5rem 0;
       border-bottom: 1px solid var(--border);
     }
     .topic-row:first-child { border-top: 1px solid var(--border); }
 
     .topic-num {
       font-family: 'DM Mono', monospace;
-      font-size: 0.65rem;
+      font-size: 0.68rem;
       color: var(--muted);
       letter-spacing: 0.1em;
     }
 
     .topic-title {
-      font-size: 0.97rem;
+      font-size: 1rem;
       color: var(--text);
+      line-height: 1.5;
     }
 
     .topic-tag {
       font-family: 'DM Mono', monospace;
-      font-size: 0.62rem;
+      font-size: 0.65rem;
       color: var(--muted);
       letter-spacing: 0.08em;
       text-transform: uppercase;
       border: 1px solid var(--border);
-      padding: 0.2rem 0.6rem;
+      padding: 0.25rem 0.7rem;
       white-space: nowrap;
     }
 
@@ -320,18 +303,17 @@
     .newsletter-block {
       background: var(--surface);
       border: 1px solid var(--border);
-      padding: 4rem;
+      padding: 5rem;
       display: grid;
       grid-template-columns: 1fr auto;
-      gap: 3rem;
+      gap: 4rem;
       align-items: center;
     }
 
     .newsletter-block p {
       color: var(--muted);
-      font-size: 0.97rem;
-      max-width: 460px;
-      line-height: 1.75;
+      font-size: 1rem;
+      line-height: 1.8;
       margin-top: 0.8rem;
     }
 
@@ -341,23 +323,25 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 2rem;
     }
 
     .footer-logo img {
-      height: 20px;
+      height: 24px;
       width: auto;
       filter: invert(1);
-      opacity: 0.35;
+      opacity: 0.3;
     }
 
     .footer-right {
       display: flex;
-      gap: 2rem;
+      gap: 2.5rem;
+      align-items: center;
     }
 
     .footer-right a {
       font-family: 'DM Mono', monospace;
-      font-size: 0.68rem;
+      font-size: 0.7rem;
       color: var(--muted);
       text-decoration: none;
       letter-spacing: 0.08em;
@@ -378,14 +362,71 @@
     }
 
     /* ─── RESPONSIVE ─── */
-    @media (max-width: 700px) {
-      .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-      .about-aside { border-left: none; border-top: 1px solid var(--border); padding-left: 0; padding-top: 2.5rem; }
-      .newsletter-block { grid-template-columns: 1fr; gap: 2rem; padding: 2rem; }
+
+    /* Tablet */
+    @media (max-width: 900px) {
+      .container { padding: 0 2rem; }
+
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        padding: 5rem 0 4rem;
+      }
+      .hero-right {
+        border-left: none;
+        border-top: 1px solid var(--border);
+        padding-left: 0;
+        padding-top: 3rem;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+      .about-aside {
+        border-left: none;
+        border-top: 1px solid var(--border);
+        padding-left: 0;
+        padding-top: 3rem;
+      }
+
+      .newsletter-block {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        padding: 3rem;
+      }
+
+      .topic-row {
+        grid-template-columns: 2.5rem 1fr auto;
+        gap: 1.5rem;
+      }
+    }
+
+    /* Mobile */
+    @media (max-width: 600px) {
+      .container { padding: 0 1.5rem; }
+
+      .logo img { height: 32px; }
+
       nav a:not(.nav-cta) { display: none; }
-      .topic-row { grid-template-columns: 2rem 1fr; }
+
+      h1 { font-size: 2.2rem; }
+
+      section { padding: 4rem 0; }
+
+      .topic-row {
+        grid-template-columns: 2rem 1fr;
+        gap: 1rem;
+      }
       .topic-tag { display: none; }
-      footer { flex-direction: column; gap: 1.5rem; align-items: flex-start; }
+
+      .newsletter-block { padding: 2rem; }
+
+      footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+      }
     }
   </style>
 </head>
@@ -411,37 +452,19 @@
   <!-- HERO -->
   <div class="container">
     <div class="hero fade-in">
-      <div class="hero-label">Think Tank · Políticas de Innovación · Código Abierto</div>
-      <h1>El conocimiento útil<br />no se guarda.<br />Se comparte.</h1>
-      <p class="hero-desc">
-        Ideonomy Lab es un espacio abierto de reflexión y experiencia en torno a la innovación, las políticas públicas y el desarrollo de ecosistemas. Sin filtros institucionales. Sin PDFs que nadie lee.
-      </p>
-      <div class="hero-actions">
-        <a href="https://github.com/ideonomy" target="_blank" class="btn-primary">Explorar el repositorio</a>
-        <a href="https://ideonomy.systeme.io" target="_blank" class="btn-secondary">Leer la newsletter →</a>
+      <div class="hero-left">
+        <div class="hero-label">Think Tank · Políticas de Innovación · Código Abierto</div>
+        <h1>El conocimiento útil<br />no se guarda.<br />Se comparte.</h1>
+        <div class="hero-actions">
+          <a href="https://github.com/ideonomy" target="_blank" class="btn-primary">Explorar el repositorio</a>
+          <a href="https://ideonomy.systeme.io" target="_blank" class="btn-secondary">Leer la newsletter →</a>
+        </div>
       </div>
-    </div>
-  </div>
-
-  <!-- MARQUEE -->
-  <div class="marquee-wrap">
-    <div class="marquee-track">
-      <span class="marquee-item">Políticas de innovación</span>
-      <span class="marquee-item">Ecosistemas industriales</span>
-      <span class="marquee-item">Desarrollo territorial</span>
-      <span class="marquee-item">Innovación en lo público</span>
-      <span class="marquee-item">Datos y decisiones</span>
-      <span class="marquee-item">País Vasco</span>
-      <span class="marquee-item">Think Tank abierto</span>
-      <span class="marquee-item">Reflexión y experiencia</span>
-      <span class="marquee-item">Políticas de innovación</span>
-      <span class="marquee-item">Ecosistemas industriales</span>
-      <span class="marquee-item">Desarrollo territorial</span>
-      <span class="marquee-item">Innovación en lo público</span>
-      <span class="marquee-item">Datos y decisiones</span>
-      <span class="marquee-item">País Vasco</span>
-      <span class="marquee-item">Think Tank abierto</span>
-      <span class="marquee-item">Reflexión y experiencia</span>
+      <div class="hero-right">
+        <p class="hero-desc">
+          Ideonomy Lab es un espacio abierto de reflexión y experiencia en torno a la innovación, las políticas públicas y el desarrollo de ecosistemas. Sin filtros institucionales. Sin PDFs que nadie lee.
+        </p>
+      </div>
     </div>
   </div>
 
@@ -530,7 +553,7 @@
           <span class="topic-tag">gestión</span>
         </div>
       </div>
-      <p style="margin-top: 2rem; font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--muted); letter-spacing: 0.08em;">Y muchos más, a medida que el lab crece.</p>
+      <p style="margin-top: 2rem; font-family: 'DM Mono', monospace; font-size: 0.72rem; color: var(--muted); letter-spacing: 0.08em;">Y muchos más, a medida que el lab crece.</p>
     </div>
   </section>
 
@@ -543,7 +566,7 @@
           <h2>Lo que no sale<br />en los informes.</h2>
           <p>Cada semana, una reflexión directa sobre innovación, política pública y decisiones. Sin artificios, sin jerga. Para quien quiere pensar, no solo consumir. Más de una década de experiencia destilada en unos minutos de lectura.</p>
         </div>
-        <a href="https://ideonomy.systeme.io" target="_blank" class="btn-primary" style="white-space: nowrap; align-self: center;">Suscribirme →</a>
+        <a href="https://ideonomy.systeme.io" target="_blank" class="btn-primary" style="align-self: center;">Suscribirme →</a>
       </div>
     </div>
   </section>
