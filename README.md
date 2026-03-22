@@ -60,4 +60,4 @@ Ideonomy es un espacio personal donde ordenar y compartir algunas de las pregunt
 
 ## Contacto
 
-Puedes seguir estas reflexiones también en la newsletter **Ideonomy** y en LinkedIn.
+Puedes seguir estas reflexiones también en la newsletter [**Ideonomy**](https://ideonomy.com) y en LinkedIn.
